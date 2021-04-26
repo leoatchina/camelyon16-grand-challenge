@@ -32,7 +32,7 @@ import matplotlib.pyplot as plt
 from camelyon16.inception import image_processing
 from camelyon16.inception import inception_model as inception
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from camelyon16.inception.dataset import Dataset
 from camelyon16 import utils as utils
 from camelyon16.inception.slim import slim

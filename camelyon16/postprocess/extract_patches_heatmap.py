@@ -11,7 +11,7 @@ import threading
 
 import cv2
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from PIL import Image
 
 from camelyon16 import utils as utils

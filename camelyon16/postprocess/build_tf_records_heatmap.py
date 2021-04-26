@@ -73,7 +73,7 @@ import time
 from datetime import datetime
 import math
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from camelyon16 import utils as utils
 

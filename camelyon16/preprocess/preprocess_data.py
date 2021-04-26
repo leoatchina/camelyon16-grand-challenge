@@ -6,19 +6,19 @@ import numpy as np
 import cv2
 
 # modify below directory entries as per your local file system
-TRAIN_TUMOR_WSI_PATH = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
+TRAIN_TUMOR_WSI_PATH = '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
                                 'TrainingData/Train_Tumor'
-TRAIN_NORMAL_WSI_PATH = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
+TRAIN_NORMAL_WSI_PATH = '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
                                  'TrainingData/Train_Normal'
-TRAIN_TUMOR_MASK_PATH = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/TrainingData/' \
+TRAIN_TUMOR_MASK_PATH = '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/TrainingData/' \
                                  'Ground_Truth/Mask'
-PROCESSED_PATCHES_NORMAL_NEGATIVE_PATH = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
+PROCESSED_PATCHES_NORMAL_NEGATIVE_PATH = '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
                                          'Processed/patch-based-classification/normal-label-0/'
-PROCESSED_PATCHES_TUMOR_NEGATIVE_PATH = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
+PROCESSED_PATCHES_TUMOR_NEGATIVE_PATH = '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
                                          'Processed/patch-based-classification/tumor-label-0/'
-PROCESSED_PATCHES_POSITIVE_PATH = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
+PROCESSED_PATCHES_POSITIVE_PATH = '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
                                         'Processed/patch-based-classification/label-1/'
-PROCESSED_PATCHES_FROM_USE_MASK_POSITIVE_PATH = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
+PROCESSED_PATCHES_FROM_USE_MASK_POSITIVE_PATH = '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
                                         'Processed/patch-based-classification/use-mask-label-1/'
 PATCH_SIZE = 256
 PATCH_NORMAL_PREFIX = 'normal_'

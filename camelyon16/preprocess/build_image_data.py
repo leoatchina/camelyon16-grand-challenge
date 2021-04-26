@@ -73,19 +73,19 @@ import sys
 import threading
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
-CAMELYON_PROCESSED_PATCHES_TRAIN = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/' \
+CAMELYON_PROCESSED_PATCHES_TRAIN = '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/' \
                                    'patch-based-classification/raw-data/train/'
 CAMELYON_PROCESSED_PATCHES_TRAIN_NEGATIVE = CAMELYON_PROCESSED_PATCHES_TRAIN + 'label-0/'
 CAMELYON_PROCESSED_PATCHES_TRAIN_POSITIVE = CAMELYON_PROCESSED_PATCHES_TRAIN + 'label-1/'
 
-CAMELYON_PROCESSED_PATCHES_VALIDATION = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
+CAMELYON_PROCESSED_PATCHES_VALIDATION = '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
                                         'Processed/patch-based-classification/raw-data/validation/'
 CAMELYON_PROCESSED_PATCHES_VALIDATION_NEGATIVE = CAMELYON_PROCESSED_PATCHES_VALIDATION + 'label-0/'
 CAMELYON_PROCESSED_PATCHES_VALIDATION_POSITIVE = CAMELYON_PROCESSED_PATCHES_VALIDATION + 'label-1/'
 
-OUTPUT_DIR = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/' \
+OUTPUT_DIR = '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/' \
              'patch-based-classification/tf-records/'
 
 N_TRAIN_SAMPLES = 250000

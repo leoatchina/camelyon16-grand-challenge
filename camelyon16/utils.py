@@ -1,8 +1,9 @@
 import getpass
 
-users = ['arjun', 'millpc']
+users = ['arjun', 'taotao']
 
 user = getpass.getuser()
+
 print('user: %s' % user)
 
 assert user in users, 'User not Authorised!!'
@@ -12,72 +13,72 @@ def is_running_on_server():
     return user == 'arjun'
 
 
-data_subset = ['train', 'train-aug', 'validation', 'validation-aug', 'heatmap']
+data_subset                                        = ['train', 'train-aug', 'validation', 'validation-aug', 'heatmap']
 
-THESIS_FIGURE_DIR = '/home/millpc/Documents/Arjun/Study/Thesis/Defense/Me/figures/'
+THESIS_FIGURE_DIR                                  = '/home/taotao/Documents/Arjun/Study/Thesis/Defense/Me/figures/'
 
-DATA_DIR = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/'
+DATA_DIR                                           = '/data/medical_data/CAMELYON16'
 
-TUMOR_WSI_PATH = DATA_DIR + 'TrainingData/Train_Tumor'
-NORMAL_WSI_PATH = DATA_DIR + 'TrainingData/Train_Normal'
-TUMOR_MASK_PATH = DATA_DIR + 'TrainingData/Ground_Truth/Mask'
-TEST_WSI_PATH = DATA_DIR + 'Testset'
+TUMOR_WSI_PATH                                     = DATA_DIR + 'TrainingData/Train_Tumor'
+NORMAL_WSI_PATH                                    = DATA_DIR + 'TrainingData/Train_Normal'
+TUMOR_MASK_PATH                                    = DATA_DIR + 'TrainingData/Ground_Truth/Mask'
+TEST_WSI_PATH                                      = DATA_DIR + 'Testset'
 
-PATCHES_TRAIN_DIR = DATA_DIR + 'Processed/patch-based-classification/raw-data/train/'
-PATCHES_VALIDATION_DIR = DATA_DIR + 'Processed/patch-based-classification/raw-data/validation/'
-PATCHES_TRAIN_NEGATIVE_PATH = PATCHES_TRAIN_DIR + 'label-0/'
-PATCHES_TRAIN_POSITIVE_PATH = PATCHES_TRAIN_DIR + 'label-1/'
-PATCHES_VALIDATION_NEGATIVE_PATH = PATCHES_VALIDATION_DIR + 'label-0/'
-PATCHES_VALIDATION_POSITIVE_PATH = PATCHES_VALIDATION_DIR + 'label-1/'
+PATCHES_TRAIN_DIR                                  = DATA_DIR + 'Processed/patch-based-classification/raw-data/train/'
+PATCHES_VALIDATION_DIR                             = DATA_DIR + 'Processed/patch-based-classification/raw-data/validation/'
+PATCHES_TRAIN_NEGATIVE_PATH                        = PATCHES_TRAIN_DIR + 'label-0/'
+PATCHES_TRAIN_POSITIVE_PATH                        = PATCHES_TRAIN_DIR + 'label-1/'
+PATCHES_VALIDATION_NEGATIVE_PATH                   = PATCHES_VALIDATION_DIR + 'label-0/'
+PATCHES_VALIDATION_POSITIVE_PATH                   = PATCHES_VALIDATION_DIR + 'label-1/'
 
-PATCHES_TRAIN_AUG_DIR = DATA_DIR + 'Processed/patch-based-classification/raw-data-aug/train/'
-PATCHES_VALIDATION_AUG_DIR = DATA_DIR + 'Processed/patch-based-classification/raw-data-aug/validation/'
-PATCHES_TRAIN_AUG_NEGATIVE_PATH = PATCHES_TRAIN_AUG_DIR + 'label-0/'
-PATCHES_TRAIN_AUG_POSITIVE_PATH = PATCHES_TRAIN_AUG_DIR + 'label-1/'
+PATCHES_TRAIN_AUG_DIR                              = DATA_DIR + 'Processed/patch-based-classification/raw-data-aug/train/'
+PATCHES_VALIDATION_AUG_DIR                         = DATA_DIR + 'Processed/patch-based-classification/raw-data-aug/validation/'
+PATCHES_TRAIN_AUG_NEGATIVE_PATH                    = PATCHES_TRAIN_AUG_DIR + 'label-0/'
+PATCHES_TRAIN_AUG_POSITIVE_PATH                    = PATCHES_TRAIN_AUG_DIR + 'label-1/'
 PATCHES_TRAIN_AUG_EXCLUDE_MIRROR_WSI_NEGATIVE_PATH = PATCHES_TRAIN_AUG_DIR + 'exclude-mirror-label-0/'
 PATCHES_TRAIN_AUG_EXCLUDE_MIRROR_WSI_POSITIVE_PATH = PATCHES_TRAIN_AUG_DIR + 'exclude-mirror-label-1/'
-PATCHES_VALIDATION_AUG_NEGATIVE_PATH = PATCHES_VALIDATION_AUG_DIR + 'label-0/'
-PATCHES_VALIDATION_AUG_POSITIVE_PATH = PATCHES_VALIDATION_AUG_DIR + 'label-1/'
+PATCHES_VALIDATION_AUG_NEGATIVE_PATH               = PATCHES_VALIDATION_AUG_DIR + 'label-0/'
+PATCHES_VALIDATION_AUG_POSITIVE_PATH               = PATCHES_VALIDATION_AUG_DIR + 'label-1/'
 
 TRAIN_TF_RECORDS_DIR_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/tf-records/',
-    'millpc': DATA_DIR + 'Processed/patch-based-classification/tf-records/'
+    'arjun':  '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/tf-records/',
+    'taotao': DATA_DIR + 'Processed/patch-based-classification/tf-records/'
 }
 
 HEAT_MAP_RAW_PATCHES_DIR_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/heat-map/patches/raw/',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/heat-map/patches/raw/'
+    'arjun':  '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/heat-map/patches/raw/',
+    'taotao': '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/heat-map/patches/raw/'
 }
 
 HEAT_MAP_TF_RECORDS_DIR_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/heat-map/patches/tf-records/',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/'
+    'arjun':  '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/heat-map/patches/tf-records/',
+    'taotao': '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/'
               'heat-map/patches/tf-records/'
 }
 
 HEAT_MAP_WSIs_PATH_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/heat-map/WSIs/',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/heat-map/WSIs/'
+    'arjun':  '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/heat-map/WSIs/',
+    'taotao': '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/heat-map/WSIs/'
 }
 
 HEAT_MAP_DIR_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/heat-map/heatmaps/',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/heat-map/heatmaps/'
+    'arjun':  '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/heat-map/heatmaps/',
+    'taotao': '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/heat-map/heatmaps/'
 }
 
 FINE_TUNE_MODEL_CKPT_PATH_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/training/model5/model.ckpt-95000',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/training/successful_model/model5/model.ckpt-95000'
+    'arjun':  '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/training/model5/model.ckpt-95000',
+    'taotao': '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/training/successful_model/model5/model.ckpt-95000'
 }
 
 EVAL_MODEL_CKPT_PATH_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/training/model8/model.ckpt-90000',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/training/all_models/model8/model.ckpt-90000'
+    'arjun':  '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/training/model8/model.ckpt-90000',
+    'taotao': '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/training/all_models/model8/model.ckpt-90000'
 }
 
 HEATMAP_MODEL_CKPT_PATH_MILLPC = {
-    'model5': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/training/successful_model/model5/model.ckpt-95000',
-    'model8': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/training/successful_model/model8/model.ckpt-90000'
+    'model5': '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/training/successful_model/model5/model.ckpt-95000',
+    'model8': '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/training/successful_model/model8/model.ckpt-90000'
 }
 
 HEATMAP_MODEL_CKPT_PATH_ARJUN = {
@@ -86,38 +87,41 @@ HEATMAP_MODEL_CKPT_PATH_ARJUN = {
 }
 
 TRAIN_DIR_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/training/model8/',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/training/all_models/model8/'
+    'arjun':  '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/training/model8/',
+    'taotao': '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/training/all_models/model8/'
 }
 
 EVAL_DIR_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/evaluation',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/evaluation'
+    'arjun':  '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/evaluation',
+    'taotao': '/home/taotao/Documents/Arjun/Study/Thesis/CAMELYON16/evaluation'
 }
 
-TRAIN_TF_RECORDS_DIR = TRAIN_TF_RECORDS_DIR_LIST[user]
-TRAIN_DIR = TRAIN_DIR_LIST[user]
-EVAL_DIR = EVAL_DIR_LIST[user]
-HEAT_MAP_RAW_PATCHES_DIR = HEAT_MAP_RAW_PATCHES_DIR_LIST[user]
-HEAT_MAP_TF_RECORDS_DIR = HEAT_MAP_TF_RECORDS_DIR_LIST[user]
-HEAT_MAP_WSIs_PATH = HEAT_MAP_WSIs_PATH_LIST[user]
-HEAT_MAP_DIR = HEAT_MAP_DIR_LIST[user]
-FINE_TUNE_MODEL_CKPT_PATH = FINE_TUNE_MODEL_CKPT_PATH_LIST[user]
-EVAL_MODEL_CKPT_PATH = EVAL_MODEL_CKPT_PATH_LIST[user]
+TRAIN_TF_RECORDS_DIR        = TRAIN_TF_RECORDS_DIR_LIST[user]
+TRAIN_DIR                   = TRAIN_DIR_LIST[user]
+EVAL_DIR                    = EVAL_DIR_LIST[user]
+HEAT_MAP_RAW_PATCHES_DIR    = HEAT_MAP_RAW_PATCHES_DIR_LIST[user]
+HEAT_MAP_TF_RECORDS_DIR     = HEAT_MAP_TF_RECORDS_DIR_LIST[user]
+HEAT_MAP_WSIs_PATH          = HEAT_MAP_WSIs_PATH_LIST[user]
+HEAT_MAP_DIR                = HEAT_MAP_DIR_LIST[user]
+FINE_TUNE_MODEL_CKPT_PATH   = FINE_TUNE_MODEL_CKPT_PATH_LIST[user]
+EVAL_MODEL_CKPT_PATH        = EVAL_MODEL_CKPT_PATH_LIST[user]
 
-heatmap_models = ['model5', 'model8']
-FIRST_HEATMAP_MODEL = 'model5'
-SECOND_HEATMAP_MODEL = 'model8'
-PATCH_SIZE = 256
-PATCH_NORMAL_PREFIX = 'normal_'
-PATCH_TUMOR_PREFIX = 'tumor_'
-PATCH_AUG_NORMAL_PREFIX = 'aug_false_normal_'
-PATCH_AUG_TUMOR_PREFIX = 'aug_false_tumor_'
-PREFIX_SHARD_TRAIN = 'train'
-PREFIX_SHARD_AUG_TRAIN = 'train-aug'
-PREFIX_SHARD_VALIDATION = 'validation'
+heatmap_models              = ['model5', 'model8']
+FIRST_HEATMAP_MODEL         = 'model5'
+SECOND_HEATMAP_MODEL        = 'model8'
+
+PATCH_SIZE                  = 256
+PATCH_NORMAL_PREFIX         = 'normal_'
+PATCH_TUMOR_PREFIX          = 'tumor_'
+PATCH_AUG_NORMAL_PREFIX     = 'aug_false_normal_'
+PATCH_AUG_TUMOR_PREFIX      = 'aug_false_tumor_'
+PREFIX_SHARD_TRAIN          = 'train'
+PREFIX_SHARD_AUG_TRAIN      = 'train-aug'
+PREFIX_SHARD_VALIDATION     = 'validation'
 PREFIX_SHARD_AUG_VALIDATION = 'validation-aug'
 
+
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 tpr_harvard = [0.72, 0.72, 0.74, 0.74, 0.78, 0.78, 0.84, 0.84, 0.86, 0.86, 0.91, 0.91, 0.925, 0.925, 0.935, 0.935,
                0.955, 1.0]
 fpr_harvard = [0.0, 0.03, 0.03, 0.05, 0.05, 0.09, 0.09, 0.12, 0.12, 0.135, 0.135, 0.16, 0.16, 0.24, 0.24, 0.78, 0.78,
@@ -253,30 +257,30 @@ heatmap_feature_names = ['region_count', 'ratio_tumor_tissue', 'largest_tumor_ar
                          'extent_skew', 'extent_kurt', 'max_solidity', 'mean_solidity', 'solidity_variance',
                          'solidity_skew', 'solidity_kurt', 'label']
 
-BATCH_SIZE = 32
+BATCH_SIZE                          = 32
 
-N_TRAIN_SAMPLES = 288000
-N_VALIDATION_SAMPLES = 10000
-N_SAMPLES_PER_TRAIN_SHARD = 1000
-N_SAMPLES_PER_VALIDATION_SHARD = 250
+N_TRAIN_SAMPLES                     = 288000
+N_VALIDATION_SAMPLES                = 10000
+N_SAMPLES_PER_TRAIN_SHARD           = 1000
+N_SAMPLES_PER_VALIDATION_SHARD      = 250
 
 NUM_NEGATIVE_PATCHES_FROM_EACH_BBOX = 100
 NUM_POSITIVE_PATCHES_FROM_EACH_BBOX = 500
-PATCH_INDEX_NEGATIVE = 700000
-PATCH_INDEX_POSITIVE = 700000
+PATCH_INDEX_NEGATIVE                = 700000
+PATCH_INDEX_POSITIVE                = 700000
 
-TUMOR_PROB_THRESHOLD = 0.90
-PIXEL_WHITE = 255
-PIXEL_BLACK = 0
+TUMOR_PROB_THRESHOLD                = 0.90
+PIXEL_WHITE                         = 255
+PIXEL_BLACK                         = 0
 
-HEATMAP_FEATURE_CSV_TRAIN = 'features/heatmap_features_train.csv'
-HEATMAP_FEATURE_CSV_VALIDATION = 'features/heatmap_features_validation.csv'
-HEATMAP_FEATURE_CSV_TRAIN_ALL = 'features/heatmap_features_train_all.csv'
-HEATMAP_FEATURE_CSV_TEST = 'features/heatmap_features_test.csv'
-HEATMAP_FEATURE_CSV_TRAIN_SECOND_MODEL = 'features/heatmap_features_train_model8.csv'
+HEATMAP_FEATURE_CSV_TRAIN                   = 'features/heatmap_features_train.csv'
+HEATMAP_FEATURE_CSV_VALIDATION              = 'features/heatmap_features_validation.csv'
+HEATMAP_FEATURE_CSV_TRAIN_ALL               = 'features/heatmap_features_train_all.csv'
+HEATMAP_FEATURE_CSV_TEST                    = 'features/heatmap_features_test.csv'
+HEATMAP_FEATURE_CSV_TRAIN_SECOND_MODEL      = 'features/heatmap_features_train_model8.csv'
 HEATMAP_FEATURE_CSV_VALIDATION_SECOND_MODEL = 'features/heatmap_features_validation_model8.csv'
-HEATMAP_FEATURE_CSV_TRAIN_ALL_SECOND_MODEL = 'features/heatmap_features_train_all_model8.csv'
-HEATMAP_FEATURE_CSV_TEST_SECOND_MODEL = 'features/heatmap_features_test_model8.csv'
+HEATMAP_FEATURE_CSV_TRAIN_ALL_SECOND_MODEL  = 'features/heatmap_features_train_all_model8.csv'
+HEATMAP_FEATURE_CSV_TEST_SECOND_MODEL       = 'features/heatmap_features_test_model8.csv'
 
 TEST_CSV_GT = 'GT.csv'
 

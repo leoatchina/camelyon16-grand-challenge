@@ -24,7 +24,7 @@ import os.path
 import time
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from camelyon16.inception import image_processing
 from camelyon16.inception import inception_model as inception

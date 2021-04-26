@@ -19,20 +19,32 @@ from __future__ import division
 from __future__ import print_function
 
 import sys
-sys.path.insert(0, '/home/arjun/MS/Thesis/CAMELYON-16/source')
+
 import math
 import os.path
 import time
 from datetime import datetime
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+def get_current_dir(p=''):
+    def fake():
+        pass
+    return os.path.abspath(os.path.join(os.path.dirname(fake.__code__.co_filename), p))
+sys.path.insert(0, get_current_dir('../..'))
+
+
 
 from camelyon16.inception import image_processing
 from camelyon16.inception import inception_model as inception
 import camelyon16.utils as utils
 import numpy as np
 import sklearn as sk
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from camelyon16.inception.dataset import Dataset
 from tensorflow.contrib import metrics
+
+
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 FLAGS = tf.app.flags.FLAGS
 
@@ -63,12 +75,10 @@ tf.app.flags.DEFINE_string('subset', 'validation',
 
 BATCH_SIZE = 100
 
-
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 def _eval_once(saver, summary_writer, accuracy, summary_op, confusion_matrix_op):
     # def _eval_once(saver, summary_writer, accuracy, summary_op, confusion_matrix_op, logits, labels, dense_labels):
-
     """Runs Eval once.
-
     Args:
       saver: Saver.
       summary_writer: Summary writer.
@@ -76,6 +86,7 @@ def _eval_once(saver, summary_writer, accuracy, summary_op, confusion_matrix_op)
       top_5_op: Top 5 op.
       summary_op: Summary op.
     """
+
     with tf.Session() as sess:
         print(FLAGS.checkpoint_dir)
         ckpt = None

@@ -73,7 +73,7 @@ import sys
 import threading
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import camelyon16.utils as utils
 
 tf.app.flags.DEFINE_string('output_directory', utils.TRAIN_TF_RECORDS_DIR,

@@ -28,14 +28,14 @@ import time
 from datetime import datetime
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from camelyon16.inception import image_processing
 from camelyon16.inception import inception_model as inception
 from camelyon16.inception.dataset import Dataset
 from camelyon16.inception.slim import slim
 import camelyon16.utils as utils
-
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 DATA_SET_NAME = 'Camelyon'
 
 FLAGS = tf.app.flags.FLAGS
